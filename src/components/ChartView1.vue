@@ -13,7 +13,7 @@
 import {option} from "../assets/res"
 import * as echarts from "echarts"
 export default {
-  name: "ChartView2",
+  name: "ChartView1",
   data: () => ({
     option: option,
   }),
