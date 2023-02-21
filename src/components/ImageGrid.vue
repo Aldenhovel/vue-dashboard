@@ -24,16 +24,16 @@
 
         <v-card height="150px"
                 width="100%"
-                elevation="elevation"
+                elevation="1"
                 class="mt-0"
                 v-show="rowid * itemsPerRow + colid >= imgLst.length? false: true"
-                style="background-color: transparent;"
+                style="background-color: wheat;"
 
         >
           <v-img height="150px"
                  width="100%"
-                 contain :src="imgLst[0]"
-                 @click="previewOn(imgLst[0])"
+                 contain :src="imgLst[rowid * itemsPerRow + colid]"
+                 @click="previewOn(imgLst[rowid * itemsPerRow + colid])"
                  style=" cursor: pointer;"
           ></v-img>
         </v-card>
@@ -46,6 +46,7 @@
             v-model="onPage"
             :length="pages"
             circle
+            total-visible="12"
         ></v-pagination>
       </v-col>
     </v-row>

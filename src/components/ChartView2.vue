@@ -6,7 +6,7 @@
           <v-card height="800px"
                   width="100%"
                   elevation="5"
-                  style="background-color: transparent; overflow: auto">
+                  style="background-color: wheat; overflow: auto">
             <image-grid></image-grid>
           </v-card>
       </v-col>
