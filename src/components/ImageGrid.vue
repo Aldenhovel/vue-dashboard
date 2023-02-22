@@ -17,7 +17,16 @@
     <v-row>
       <v-col cols="12">{{selectQuery}}</v-col>
     </v-row> -->
-
+    <v-row>
+      <v-col cols="12">
+        <v-pagination
+            v-model="onPage"
+            :length="pages"
+            circle
+            total-visible="16"
+        ></v-pagination>
+      </v-col>
+    </v-row>
     <!-- 展示网格 -->
     <v-row v-for="(n, rowid) in rows" :key="rowid.id" style="background-color: transparent">
       <v-col :cols="12 / itemsPerRow" v-for="(n, colid) in itemsPerRow" :key="colid.id" style="background-color: transparent">
@@ -40,16 +49,10 @@
       </v-col>
     </v-row>
 
-    <v-row>
-      <v-col cols="12">
-        <v-pagination
-            v-model="onPage"
-            :length="pages"
-            circle
-            total-visible="12"
-        ></v-pagination>
-      </v-col>
-    </v-row>
+
+
+
+
 
 
   </v-container>
@@ -62,7 +65,7 @@ import axios from "axios";
 export default {
   name: "ImageGrid",
   data: () => ({
-    imgLst: ["https://t7.baidu.com/it/u=727460147,2222092211&fm=193&f=GIF",  "logo.jpg", "logo.jpg", "logo.jpg", "logo.jpg", "logo.jpg", "logo.jpg"],
+    imgLst: [],
     itemsPerRow: 4,
     rows: 4,
     onPage: 1,
@@ -70,6 +73,8 @@ export default {
     selectQuery: "",
     preview: false,
     previewingImg: "",
+    needThreshold: false,
+    threshold: 0,
   }),
   methods: {
     previewOn: function (src) {
@@ -88,6 +93,12 @@ export default {
     eventbus.$on('selectQueryChange', target => {
       this.selectQuery = target;
     })
+    eventbus.$on('needThresholdChange', target => {
+      this.needThreshold = target;
+    })
+    eventbus.$on('thresholdChange', target => {
+      this.threshold = target;
+    })
 
     eventbus.$on('findIt', target => {
       this.pages = target.pages;
@@ -102,7 +113,12 @@ export default {
 
   watch: {
     onPage: function () {
-      axios.post('/pageChange', {onPage: this.onPage, selectQuery: this.selectQuery}).then(response => {
+      axios.post('/pageChange', {
+        onPage: this.onPage,
+        selectQuery: this.selectQuery,
+        needThreshold: this.needThreshold,
+        threshold: this.threshold,
+      }).then(response => {
         let data = response.data;
         let pages = data.pages;
         let onPage = data.onPage;
