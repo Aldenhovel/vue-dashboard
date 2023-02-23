@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2812818 */
+  src: url('iconfont.woff2?t=1677133416509') format('woff2'),
+       url('iconfont.woff?t=1677133416509') format('woff'),
+       url('iconfont.ttf?t=1677133416509') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-switch1:before {
+  content: "\e837";
+}
+
+.icon-Switch:before {
+  content: "\e631";
+}
+
+.icon-switch2:before {
+  content: "\e691";
+}
+
+.icon-switch3:before {
+  content: "\e605";
+}
+
+.icon-switch-filling:before {
+  content: "\e68b";
+}
+
+.icon-emotion-happy-line:before {
+  content: "\e881";
+}
+
+.icon-emotion-unhappy-line:before {
+  content: "\e876";
+}
+
+.icon-emotion-normal-line:before {
+  content: "\e829";
+}
+
+.icon-a-download-line:before {
+  content: "\e9e3";
+}
+
+.icon-a-addline-line:before {
+  content: "\e9d8";
+}
+
+.icon-sharpicons_stamp-badge:before {
+  content: "\e794";
+}
+
+.icon-sharpicons_shield-badge:before {
+  content: "\e795";
+}
+
+.icon-sharpicons_badge-:before {
+  content: "\e796";
+}
+
+.icon-sharpicons_badge-1:before {
+  content: "\e797";
+}
+
+.icon-a-ziyuan109:before {
+  content: "\e8f0";
+}
+
+.icon-a-ziyuan142:before {
+  content: "\e8f1";
+}
+
+.icon-a-ziyuan121:before {
+  content: "\e8f7";
+}
+
+.icon-a-ziyuan149:before {
+  content: "\e8f8";
+}
+
+.icon-a-ziyuan150:before {
+  content: "\e8f9";
+}
+
+.icon-a-ziyuan160:before {
+  content: "\e8fa";
+}
+
+.icon-a-ziyuan169:before {
+  content: "\e8fb";
+}
+
+.icon-a-ziyuan168:before {
+  content: "\e8fc";
+}
+
+.icon-arrow-up-copy:before {
+  content: "\ea42";
+}
+
+.icon-admonish-fill:before {
+  content: "\e9d2";
+}
+
+.icon-android-fill:before {
+  content: "\e9d7";
+}
+
+.icon-a-cipheropen-fill:before {
+  content: "\e9db";
+}
+
+.icon-a-computermovement-fill:before {
+  content: "\e9de";
+}
+
+.icon-delete-fill:before {
+  content: "\e9e1";
+}
+
+.icon-a-face1-fill:before {
+  content: "\e9e6";
+}
+
+.icon-a-face3-fill:before {
+  content: "\e9e7";
+}
+
+.icon-a-face2-fill:before {
+  content: "\e9e8";
+}
+
+.icon-heart-fill:before {
+  content: "\e9ec";
+}
+
+.icon-mail-fill:before {
+  content: "\e9f1";
+}
+
+.icon-moon-fill:before {
+  content: "\e9f4";
+}
+
+.icon-password-fill:before {
+  content: "\ea01";
+}
+
+.icon-place-fill:before {
+  content: "\ea04";
+}
+
+.icon-recording-fill:before {
+  content: "\ea08";
+}
+
+.icon-a-roundleft-fill:before {
+  content: "\ea14";
+}
+
+.icon-a-roundon-fill:before {
+  content: "\ea15";
+}
+
+.icon-a-roundarrangement-fill:before {
+  content: "\ea16";
+}
+
+.icon-a-roundright-fill:before {
+  content: "\ea17";
+}
+
+.icon-a-roundunder-fill:before {
+  content: "\ea18";
+}
+
+.icon-send-fill:before {
+  content: "\ea1d";
+}
+
+.icon-a-share1-fill:before {
+  content: "\ea24";
+}
+
+.icon-a-statisticalviewCombinationoffigure-fill:before {
+  content: "\ea2a";
+}
+
+.icon-a-statisticalviewhistogram-fill:before {
+  content: "\ea2b";
+}
+
+.icon-a-statisticalviewlinechart-fill:before {
+  content: "\ea2c";
+}
+
+.icon-a-statisticalviewpiechart1-fill:before {
+  content: "\ea2d";
+}
+
+.icon-a-statisticalviewpiechart3-fill:before {
+  content: "\ea2e";
+}
+
+.icon-a-statisticalviewradarmap-fill:before {
+  content: "\ea2f";
+}
+
+.icon-a-statisticalviewscatterdiagram-fill:before {
+  content: "\ea30";
+}
+
+.icon-a-structure2-fill:before {
+  content: "\ea31";
+}
+
+.icon-stencil-fill:before {
+  content: "\ea32";
+}
+
+.icon-sun-fill:before {
+  content: "\ea33";
+}
+
+.icon-a-webpagecode-fill:before {
+  content: "\ea41";
+}
+
+.icon-add-fill:before {
+  content: "\e9d1";
+}
+
+.icon-a-activetab-fill:before {
+  content: "\e9d0";
+}
+
+.icon-a-amount2-fill:before {
+  content: "\e9d3";
+}
+
+.icon-apple-fill:before {
+  content: "\e9d4";
+}
+
+.icon-a-bills2-fill:before {
+  content: "\e9d5";
+}
+
+.icon-a-bills5-fill:before {
+  content: "\e9d6";
+}
+
+.icon-a-eyeclose-line:before {
+  content: "\e9e4";
+}
+
+.icon-eye-line:before {
+  content: "\e9e5";
+}
+
+.icon-a-ziyuan111:before {
+  content: "\e8ef";
+}
+
+.icon-a-ziyuan157:before {
+  content: "\e8f6";
+}
+
+.icon-a-ziyuan101:before {
+  content: "\e8ee";
+}
+
+.icon-a-ziyuan139:before {
+  content: "\e8f2";
+}
+
+.icon-a-ziyuan175:before {
+  content: "\e8f3";
+}
+
+.icon-a-ziyuan176:before {
+  content: "\e8f4";
+}
+
+.icon-a-ziyuan172:before {
+  content: "\e8f5";
+}
+
+.icon-floppy-disk:before {
+  content: "\e615";
+}
+
+.icon-switch:before {
+  content: "\e616";
+}
+
+.icon-nav-xiansuo:before {
+  content: "\e617";
+}
+

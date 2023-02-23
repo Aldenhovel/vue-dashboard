@@ -36,7 +36,7 @@
                 elevation="1"
                 class="mt-0"
                 v-show="rowid * itemsPerRow + colid >= imgLst.length? false: true"
-                style="background-color: wheat;"
+                style="background-color: white;"
 
         >
           <v-img height="150px"
@@ -113,6 +113,7 @@ export default {
 
   watch: {
     onPage: function () {
+      eventbus.$emit('loadingOn');
       axios.post('/pageChange', {
         onPage: this.onPage,
         selectQuery: this.selectQuery,
@@ -126,6 +127,7 @@ export default {
         this.pages = pages;
         this.onPage = onPage;
         this.imgLst = imgLst;
+        eventbus.$emit('loadingOff');
       })
     }
   }

@@ -6,13 +6,13 @@
           <v-card height="800px"
                   width="100%"
                   elevation="5"
-                  style="background-color: wheat; overflow: auto">
+                  style="background-color: whitesmoke; overflow: auto">
             <image-grid></image-grid>
           </v-card>
       </v-col>
 
       <v-col cols="4" class="tight-card">
-        <v-card height="600px" width="100%" elevation="5" style="background-color: transparent">
+        <v-card height="600px" width="100%" elevation="5" style="background-color: whitesmoke">
           <control-bar></control-bar>
         </v-card>
       </v-col>

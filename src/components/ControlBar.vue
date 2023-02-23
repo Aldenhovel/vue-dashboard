@@ -6,17 +6,18 @@
 
           <!-- 标题区域 -->
           <v-card width="100%" elevation="5" :loading="loading">
-            <v-card-title>Control Bar</v-card-title>
+            <v-card-title><i class="iconfont ma-1" style="font-size: 30px;">&#xe8f3;</i>Control Bar</v-card-title>
             <v-card-text>Find image with caption here.<br/>e.g. "a cat and a dog."</v-card-text>
           </v-card>
           <div class="ma-5"></div>
 
 
           <!-- 条件搜索输入框 -->
-          <v-card elevation="0" width="100%" class="ma-auto pa-1">
+          <v-card elevation="0" width="100%" class="ma-auto pa-1" style="background-color: transparent">
             <v-text-field
                 v-model="selectQuery"
-                label="What image do you want?."
+                label="What image do you want?"
+                @keyup.enter="findIt()"
             ></v-text-field>
           </v-card>
 
@@ -41,12 +42,12 @@
           </v-card>
 
 
-          <v-card elevation="0" width="100%" class="ma-auto mt-2 mb-2">
+          <v-card elevation="0" width="100%" class="ma-auto mt-2 mb-2" style="background-color: transparent">
             <!-- 提交按钮，将触发组件数据同步和 axios -->
-            <v-btn color="success" class="ma-1" @click="findIt()" width="30%">Find it!</v-btn>
+            <v-btn color="success" class="ma-1" @click="findIt()" width="30%"><i class="iconfont icon-pading">&#xea1d;</i>Find it!</v-btn>
 
             <!-- 清除所有选择 -->
-            <v-btn color="warning" class="ma-1" @click="clearQuery()" width="30%">Clear</v-btn>
+            <v-btn color="warning" class="ma-1" @click="clearQuery()" width="30%"><i class="iconfont icon-pading">&#xe9e1;</i>Clear</v-btn>
           </v-card>
 
 
@@ -71,6 +72,12 @@ export default {
     loading: true,
   }),
   methods:{
+    loadingOn() {
+      this.loading = true;
+    },
+    loadingOff() {
+      this.loading = false;
+    },
     clearQuery() {
       eventbus.$emit('selectQueryChange', this.selectQuery)
       this.needThreshold = false;
@@ -79,7 +86,7 @@ export default {
       this.findIt();
     },
     findIt() {
-      this.loading = true;
+      eventbus.$emit('loadingOn');
       eventbus.$emit('selectQueryChange', this.selectQuery);
       eventbus.$emit('needThresholdChange', this.needThreshold);
       eventbus.$emit('thresholdChange', this.threshold);
@@ -92,8 +99,8 @@ export default {
         let pages = data.pages;
         let onPage = 1;
         let imgLst = data.imgLst;
-        eventbus.$emit('findIt', {pages: pages, onPage: onPage, imgLst: imgLst})
-        this.loading = false;
+        eventbus.$emit('findIt', {pages: pages, onPage: onPage, imgLst: imgLst});
+        eventbus.$emit('loadingOff');
       })
 
     }
@@ -102,15 +109,22 @@ export default {
   },
   created() {
     this.findIt();
+    eventbus.$on('loadingOn', () => {
+      this.loadingOn();
+    })
+    eventbus.$on('loadingOff', () => {
+      this.loadingOff();
+    })
   },
   watch: {
-
-
 
   }
 }
 </script>
 
 <style scoped>
+.icon-pading {
+  margin-right: 0.5em;
+}
 
 </style>
